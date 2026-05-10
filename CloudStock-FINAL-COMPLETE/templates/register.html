@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head><title>Register</title><link rel="stylesheet" href="/static/css/auth.css"></head>
+<body>
+<div class="bg-animation"></div>
+<div class="auth-container"><div class="auth-box">
+<h1>📝 Register</h1><p class="subtitle">Create your account</p>
+<div id="alertBox" class="alert"></div>
+<form id="registerForm">
+<div class="user-type-selector">
+<label class="user-type-card" onclick="selectUserType('owner')">
+<input type="radio" name="user_type" value="owner" required>
+<div class="icon">🏪</div><h3>Store Owner</h3><p>Manage inventory</p>
+</label>
+<label class="user-type-card" onclick="selectUserType('supplier')">
+<input type="radio" name="user_type" value="supplier" required>
+<div class="icon">🚚</div><h3>Supplier</h3><p>Supply products</p>
+</label>
+</div>
+<div class="form-group"><input type="text" id="name" required placeholder="Full Name"></div>
+<div class="form-group"><input type="email" id="email" required placeholder="Email"></div>
+<div class="form-group"><input type="password" id="password" required placeholder="Password (min 6)" minlength="6"></div>
+<div class="form-group"><input type="text" id="companyName" placeholder="Company (optional)"></div>
+<button type="submit" class="btn-submit">Register</button>
+<div class="loading">⏳ Creating account...</div>
+</form>
+<div class="auth-footer">Have an account? <a href="/login">Login</a></div>
+</div></div>
+<script src="/static/js/register.js"></script>
+</body></html>
